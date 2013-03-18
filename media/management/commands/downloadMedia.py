@@ -3,11 +3,22 @@ Created on 06-03-2013
 
 @author: Tomasz Gorny
 '''
+from django.core.management.base import BaseCommand, CommandError
 from BeautifulSoup import BeautifulSoup as BS
 from uuid import uuid4
+from media.models import Image
 import urllib2
 import re
+from django.core.files import File
+from uTomka.settings import MEDIA_ROOT
+import os
 
+
+class Command(BaseCommand):
+    def handle(self, *args, **options):
+        jzd = WebSite("http://jebzdzidy.pl/strona/")
+        jzd.downloadImages(re.compile("img.myepicwall.com"), 10)
+         
 class WebSite():
     def __init__(self, adress):
         self.adress = adress
@@ -21,9 +32,14 @@ class WebSite():
         ext = src.split(".")[-1][0:3]
         if(not str(src).__contains__("http")):
             src = self.adress+str(page)+src
-        f = open("images/"+str(uuid4()).replace('-','')+"."+ext,"wb")
+        path = os.path.join("images", str(uuid4()).replace('-','')+"."+ext)
+        f = open(os.path.join(MEDIA_ROOT, path),"wb")
         f.write(urllib2.urlopen(src).read())
         f.close()
+        img = Image()
+        img.image = path
+        img.save()
+        
         print "  Image: "+src+" is downloaded."
         
     def downloadImages(self, imageSourceRegExp, count=-1):
@@ -53,11 +69,11 @@ class WebSite():
                 
 
         
-if __name__ == '__main__':
-    jzd = WebSite("http://jebzdzidy.pl/strona/")
-    jzd.downloadImages(re.compile("img.myepicwall.com"), 10)
-    wikary = WebSite("http://wikary.pl/?page=")
-    wikary.downloadImages(re.compile("media"), 10)
+#if __name__ == '__main__':
+#    jzd = WebSite("http://jebzdzidy.pl/strona/")
+#    jzd.downloadImages(re.compile("img.myepicwall.com"), 20)
+    #wikary = WebSite("http://wikary.pl/?page=")
+    #wikary.downloadImages(re.compile("media"), 10)
     
     
     

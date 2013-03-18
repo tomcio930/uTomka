@@ -1,5 +1,8 @@
 # Create your views here.
 from django.http import HttpResponse
+from django.shortcuts import render
+from media.models import Image
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the poll index.")
+    images = Image.objects.all()
+    return render(request, 'media/index.html', {'images': images})

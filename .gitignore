@@ -4,3 +4,4 @@
 .project
 .pydevproject
 local_settings.py
+sqlite.db
