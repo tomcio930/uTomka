@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>smieszne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/site_media/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"  media="screen">
   </head>
   <body>
-    <h1>.</h1>
-    {% for image in images %}
-   	<img src="{{ image.image.url }}" alt="image" width="500">
-    {% endfor %}
+  	<div class="container-fluid">
+	  	<div class="row-fluid">
+	  		<div class="span3"></div>
+	  		<div class="span6">
+			    {% for image in images %}
+			   	<img src="{{ image.image.url }}" alt="image">
+			    {% endfor %}
+		    </div>
+		    <div class="span3"></div>
+	    </div>
+	   </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/site_media/bootstrap/bootstrap.min.js"></script>
   </body>
 </html>
