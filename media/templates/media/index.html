@@ -16,6 +16,24 @@
 				</div>
 			</div>
 		{% endfor %}
+		
+		<div class="pagination pagination-centered">
+		  <ul>
+		    <li><a href="/{{page}}">Prev</a></li>
+		    {% for page in pages_list %}
+		    {% if page == current_page %}
+					<li><a href="/{{page}}">{{page}}</a></li>
+				{% else %}
+					<li><a href="/{{page}}">{{page}}</a></li>
+				{% endif %}
+			{% endfor %}
+		    <li><a href="#">Next</a></li>
+		  </ul>
+		</div>
+		
+		
+		
+		
 		<div class="pages_list"> 
 			{% for page in pages_list %}
 				{% if page == current_page %}
