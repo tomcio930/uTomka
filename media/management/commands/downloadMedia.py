@@ -7,6 +7,8 @@ from django.core.management.base import BaseCommand, CommandError
 from BeautifulSoup import BeautifulSoup as BS
 from uuid import uuid4
 from media.models import Image
+from media.models import UserProfile
+from django.contrib.auth.models import User
 import urllib2
 import re
 from django.core.files import File
@@ -36,8 +38,12 @@ class WebSite():
         f = open(os.path.join(MEDIA_ROOT, path),"wb")
         f.write(urllib2.urlopen(src).read())
         f.close()
+        
+        user_profile = UserProfile.objects.all()[0]
+        
         img = Image()
         img.image = path
+        img.user_profile = user_profile
         img.save()
         
         print "  Image: "+src+" is downloaded."
