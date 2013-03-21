@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smieszne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/site_media/bootstrap/css/bootstrap.css" rel="stylesheet"  media="screen">
+    <link rel="stylesheet" type="text/css" href="/site_media/css/style.css" />
+  </head>
+  <body>
+  	{% block fb_content %}
+  	{% endblock %}
+  	<div class="container">
+  		{% for image in images %}
+	  		<div class="image_container">
+				<div class="image">
+					<a href="/image/{{image.id}}">
+							<img class="img-rounded" src="{{ image.image.url }}" alt="image">
+					</a>
+				</div>
+				<div class="image_fb_like">
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{adress}}/image/{{image.id}}&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;font&amp;colorscheme=dark&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true">
+						
+					</iframe>
+				</div>
+				{% block image_comments %}
+				{% endblock %}
+			</div>
+		{% endfor %}
+		
+		{% block after_images %}
+		{% endblock %}
+	 </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/site_media/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,5 +1,4 @@
 .container{
-	margin: 50px auto;
 	border-style: solid;
 	border-width:1px;
 	border-color: #3A3A3A;
@@ -18,8 +17,14 @@
 	max-width: 600px;
 }
 
+.input-append{
+	margin: 0px auto;
+	max-width: 100px;
+	display: block;
+}
+
 .image {
-	margin: 30px auto 80px;
+	margin: 30px auto 10px;
 	max-width: 500px;
 	border-radius:8px;
 	border-style: solid;
@@ -27,11 +32,31 @@
 	border-color: #3A3A3A;
 }
 
+.image_container h2{
+	margin-left: 50px;
+	color: #33b5e5;
+}
+
+
+
+.image_container .image_fb_like{
+	margin: 20px auto;
+	max-width: 100px;
+	display: block;
+}
+
+.image_container .fb-comments{
+	margin: 20px auto;
+	max-width: 470px;
+	display: block;
+}
+
 .pages_list{
 	text-align:center;
 	margin: 30px auto 80px;
 	max-width: 700px;
 }
+
 
 
 

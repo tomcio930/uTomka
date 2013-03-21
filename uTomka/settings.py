@@ -5,6 +5,10 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__)) 
 
+ADDRESS = "127.0.0.1:800"
+
+IMAGES_PER_PAGE = 3
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )

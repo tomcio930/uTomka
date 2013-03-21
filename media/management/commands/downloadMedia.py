@@ -3,15 +3,13 @@ Created on 06-03-2013
 
 @author: Tomasz Gorny
 '''
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from BeautifulSoup import BeautifulSoup as BS
 from uuid import uuid4
 from media.models import Image
 from media.models import UserProfile
-from django.contrib.auth.models import User
 import urllib2
 import re
-from django.core.files import File
 from uTomka.settings import MEDIA_ROOT
 import os
 
