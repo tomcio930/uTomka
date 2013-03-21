@@ -11,18 +11,19 @@ def index(request, page="1"):
     
     images = Image.objects.all()
     paginator = Paginator(images, IMAGES_PER_PAGE)
+    
     try:
         images_to_show = paginator.page(page)
     except EmptyPage:
         images_to_show = paginator.page(paginator.num_pages)
         page = paginator.num_pages
+    
     previous_pages_count = 4
     next_pages_count = 5
     
     first_page = page - previous_pages_count
     last_page = page + next_pages_count
-    
-    
+     
     if(first_page < 1):
         last_page -= first_page
         first_page = 1
