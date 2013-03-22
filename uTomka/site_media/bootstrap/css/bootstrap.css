@@ -4376,10 +4376,10 @@ input[type="submit"].btn.btn-mini {
   background-image: -o-linear-gradient(top, #020202, #020202);
   background-image: linear-gradient(to bottom, #020202, #020202);
   background-repeat: repeat-x;
-  border: 1px solid #000000;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  border: 1px solid black;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff020202', GradientType=0);
   *zoom: 1;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
@@ -6211,10 +6211,10 @@ hr {
 }
 
 .navbar .navbar-inner {
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid #2d2d2d;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
-          border-radius: 0;
+          border-radius: 5px;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
