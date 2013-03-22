@@ -11,13 +11,16 @@
   	{% block fb_content %}
   	{% endblock %}
   	<div class="container">
-  		<div class="subnav">
-	  		<ul class="nav nav-pills">
-	  			<li class="active"><a href="/">Główna</a></li>
-	  			<li><a href="/">Top</a></li>
-	  			<li><a href="/">Oczekujące</a></li>
-	  			<li><a href="/add">Dodaj</a></li>
-			</ul>
+  		<div class="navbar">
+  			<div class="navbar-inner">
+  				<a class="brand" href="#">uTomka</a>
+		  		<ul class="nav">
+		  			<li class="active"><a href="/">Główna</a></li>
+		  			<li><a href="/">Top</a></li>
+		  			<li><a href="/">Oczekujące</a></li>
+		  			<li><a href="/add">Dodaj</a></li>
+				</ul>
+			</div>
 		</div>
   		{% for image in images %}
 	  		<div class="image_container">

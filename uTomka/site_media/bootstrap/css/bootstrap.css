@@ -814,7 +814,7 @@ h4 small {
 ul,
 ol {
   padding: 0;
-  margin: 0 0 -1px 25px;
+  margin: 0 0 10px 25px;
 }
 
 ul ul,
@@ -3940,6 +3940,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav {
+  margin-bottom: 20px;
   margin-left: 0;
   list-style: none;
 }
@@ -4083,7 +4084,13 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav-pills > li > a {
- 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .nav-pills > .active > a,
@@ -4353,6 +4360,9 @@ input[type="submit"].btn.btn-mini {
   *z-index: 2;
   margin-bottom: 20px;
   overflow: visible;
+  max-width: 600px;
+  margin: 10px auto;
+  
 }
 
 .navbar-inner {
@@ -6318,13 +6328,11 @@ hr {
 }
 
 div.subnav {
-  margin: 10px auto;
-  width: 300px;
+  margin: 0 1px;
   background-color: #020202;
   background-image: none;
   border: none;
-  border-bottom: 1px solid #c0c0c0;
-  border-radius: 5px;
+  border-bottom: 1px solid #222222;
 }
 
 div.subnav .nav > li > a,
