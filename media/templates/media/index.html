@@ -22,10 +22,14 @@
 		  </ul>
 		</div>
 		<div class="input-append">
-			<form name="input" action="/go_to_page/" method="get">
+			<form name="input" action="/go_to_page/" method="get" onsubmit="return validateForm()">
 	  			<input name="page" class="span1" id="appendedInputButton" type="text">
-	  			<button type="submit" class="btn" type="button">Go!</button>
+	  			<button type="submit" class="open-pop btn" type="button" data-toggle="popover" title data-content="Please insert page number :)" data-original-title="Inserted value is not a number.">Go!</button>
   			</form>
 		</div>
+		
 {% endblock%}
-	
+
+{% block scripts %}
+	<script src="/site_media/js/validation.js"></script>
+{% endblock %}
