@@ -13,8 +13,8 @@
   		<div class="navbar">
   			<div class="navbar-inner">
   				<a class="brand" href="/">uTomka</a>
-		  		<ul class="nav">
-		  			<li class="active"><a href="/">Główna</a></li>
+		  		<ul class="nav navigation">
+		  			<li><a href="/">Główna</a></li>
 		  			<li><a href="/">Top</a></li>
 		  			<li><a href="/">Oczekujące</a></li>
 		  			<li><a href="/add">Dodaj</a></li>
@@ -45,6 +45,11 @@
 	 </div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="/site_media/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+				$(".navigation li:nth-child({{active}})").addClass("active");
+		});
+    </script>
     {% block scripts %}
     {% endblock %}
   </body>

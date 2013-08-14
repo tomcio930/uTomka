@@ -8,10 +8,8 @@
 	-moz-border-radius:10px; /* Old Firefox */
 }
 
-.navigation{
-	margin: 20px auto;
-	max-width: 300px;
-	text-align: center
+.navigation li{
+	padding-left: 30px;
 }
 
 .image_container{
@@ -44,8 +42,6 @@
 	color: #33b5e5;
 }
 
-
-
 .image_container .image_fb_like{
 	margin: 20px auto;
 	max-width: 100px;
@@ -64,6 +60,12 @@
 	max-width: 700px;
 }
 
+.add_image_form{
+	margin: 20px 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
 
 
 
